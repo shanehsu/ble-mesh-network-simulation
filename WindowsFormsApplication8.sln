@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication8", "WindowsFormsApplication8\WindowsFormsApplication8.csproj", "{AA787FE2-4F57-456A-81A8-662A9CD3331F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLEMeshSimulation", "WindowsFormsApplication8\BLEMeshSimulation.csproj", "{AA787FE2-4F57-456A-81A8-662A9CD3331F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
