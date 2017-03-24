@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Windows.Forms;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace BLEMeshSimulation
 {
@@ -48,7 +46,7 @@ namespace BLEMeshSimulation
         }
         public void DrawLineBetween(Node lhs, Node rhs)
         {
-            var pen = Pens.LightGray;
+            var pen = Pens.Aqua;
             this.Context.DrawLine(pen, lhs.Location.X, lhs.Location.Y, rhs.Location.X, rhs.Location.Y);
         }
         public void Update()
@@ -59,7 +57,7 @@ namespace BLEMeshSimulation
             {
                 foreach (var parent in this.Nodes)
                 {
-                    if (child.ParentAddress == parent.Address)
+                    if (child.ParentAddress != null && child.ParentAddress.Equals(parent.Address))
                     {
                         this.DrawLineBetween(child, parent);
                     }
@@ -96,12 +94,44 @@ namespace BLEMeshSimulation
 
         public void Broadcast(Node sender, byte[] message)
         {
+            var modeString = "";
+            foreach (var node in this.Nodes)
+            {
+                if (modeString.Length > 0)
+                {
+                    modeString += ", ";
+                }
+                modeString += $"{node.State}:{node.Mode}";
+            }
+            Logger.Instance.LogLine($"推播函數執行：目前有 {this.Nodes.Count} 個節點，模式：{modeString}");
+            foreach (var node in this.Nodes)
+            {
+                var dx = sender.Location.X - node.Location.X;
+                var dy = sender.Location.Y - node.Location.Y;
 
+                if (node.Mode == Mode.Receiving && Math.Sqrt(dx * dx + dy * dy) < 175.0)
+                {
+                    int rssi = (int)(Math.Sqrt(dx * dx + dy * dy) / -0.68 + 20); 
+                    node.Receive(message, rssi);
+                }
+            }
         }
 
-        public void Start()
+        public void Start(CancellationToken token)
         {
-
+            // 另外每 20 毫秒重新繪圖
+            new Task(async () =>
+            {        
+                while (!token.IsCancellationRequested)
+                {
+                    this.Update();
+                    await Task.Delay(100);
+                }
+            }, token).Start();
+            foreach (var node in this.Nodes)
+            {
+                node.Start(token).Start();
+            }
         }
     }
 }

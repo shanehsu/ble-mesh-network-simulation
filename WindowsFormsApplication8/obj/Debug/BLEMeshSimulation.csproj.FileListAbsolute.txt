@@ -8,3 +8,13 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\WindowsFormsApplication8\Win
 C:\Users\user\Documents\Visual Studio 2015\Projects\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\System.ValueTuple.dll
 C:\Users\user\Documents\Visual Studio 2015\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.exe
 C:\Users\user\Documents\Visual Studio 2015\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.pdb
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\BLEMeshSimulation.exe.config
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\BLEMeshSimulation.exe
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\BLEMeshSimulation.pdb
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\System.ValueTuple.dll
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.csprojResolveAssemblyReference.cache
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.Properties.Resources.resources
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.csproj.GenerateResource.Cache
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.exe
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.pdb
+C:\Users\hsupe\Documents\Visual Studio 2017\Projects\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\BLEMeshSimulation.Form1.resources
